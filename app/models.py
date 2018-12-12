@@ -5,7 +5,7 @@ from django.core import validators
 class Item(models.Model):
     SEX_CHOICE = (
         (1, "Men"),
-        (2, "Women",)
+        (2, "Women"),
     )
 
     name = models.CharField(verbose_name="Name", max_length=50)
