@@ -1,0 +1,30 @@
+{% extends "app/base.html" %}
+
+{% block contet %}
+<div class="container">
+    <h2 class="text-center">Delete data</h2>
+    <p>This data is delete. Sure?<p>
+
+    <form method="post">
+        {% csrf_token %}
+        <div class="row">
+            <div class="col-12">
+                <div class="float-right"> 
+                    <a class="btn btn-outline-secondary" href="{% url 'index' %}">Back</a>
+                    <input type="submit" class="btn btn-outline-secondary" value="delete" />
+                </div>
+            </div>        
+        </div>
+        {% include "app/item_card.html" %}
+        <div class="row">
+            <div class="col-12">
+                <div class="float-right">
+                    <a class="btn btn-outline-secondary" href="{% url 'index' %}">Back</a>
+                    <input type="submit" class="btn btn-outline-secondary" value="delete">
+                </div>
+            </div>
+        </div>
+    </form>                
+</div>
+
+{% endblock contet %}

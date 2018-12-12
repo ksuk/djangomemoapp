@@ -1,0 +1,33 @@
+{% extends "app/base.html" %}
+{% load crispy_form_tags %}
+{% block contemt %}
+{{ form.certifications.error }}
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h2 class="text-center">Input Data</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="float-right">
+                <a class="btn btn-outline-secondary" href="{% url 'index' %}">Back</a>
+                <a class="btn btn-outline-secondary save" href="#">Save</a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <form method="post" id="myform">
+            {% csrf_token %}
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <a class="btn btn-outline-secondary" href="{% url 'index' %}">Back</a>
+            <a class="btn btn-outline-secondary save" href="#">Save</a>
+        </div>
+    </div>
+</div>
+{% endblock contemt %}
